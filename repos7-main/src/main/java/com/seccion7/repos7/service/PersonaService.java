@@ -15,7 +15,6 @@ public class PersonaService {
 
     public Persona guardar(Persona persona){
         return personaRepository.create(persona);
-       
     }
 
     public List<Persona> listartodas()
@@ -39,5 +38,9 @@ public class PersonaService {
     {
         personaRepository.delete(id);
         return "Persona eliminada";
+    }
+
+    public Persona buscarporrut(String rut) {
+        return personaRepository.readbyRut(rut);
     }
 }
